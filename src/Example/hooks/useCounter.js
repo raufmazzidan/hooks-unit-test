@@ -1,13 +1,15 @@
 import { useState } from "react"
 
 const useCounter = () => {
-  const [count, _setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-  const setCount = (c) => () => _setCount(c);
+  const plus = () => setCount(count + 1);
+  const minus = () => setCount(count - 1);
 
   return {
-    setCount,
-    count
+    count,
+    minus,
+    plus
   }
 }
 

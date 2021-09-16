@@ -4,15 +4,16 @@ import useCounter from './hooks/useCounter'
 function Example() {
   const {
     count,
-    setCount
+    plus,
+    minus
   } = useCounter();
 
   return (
     <div style={{ padding: 16 }}>
       <h2>Counter: {count}</h2>
-      <button onClick={setCount(count - 1)}>Kurang</button>
+      <button onClick={minus}>Kurang</button>
       &nbsp;
-      <button onClick={setCount(count + 1)}>Tambah</button>
+      <button onClick={plus}>Tambah</button>
     </div>
   )
 }
